@@ -1,14 +1,5 @@
 package org.Bank;
 
-// The class should have the following properties:
-// Balance
-// MinimumBalance
-// AccountHolderName
-
-// The class should have the following methods:
-// Withdraw
-// Deposit
-
 public class CurrentAccount {
     String accountHolderName;
     int balance;
@@ -37,7 +28,13 @@ public class CurrentAccount {
     }
 
     public void Deposit(int depAmount){
+        int updatedAmount = getBalance()+depAmount;
+        setBalance(updatedAmount);
+    }
 
+    public void Withdraw(int withdrawAmount){
+        int updatedAmount = getBalance()-withdrawAmount;
+        setBalance(updatedAmount);
     }
 
 }
